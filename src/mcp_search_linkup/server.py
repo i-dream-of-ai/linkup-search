@@ -10,8 +10,6 @@ import logging
 import os
 # Initialize the LinkupClient
 
-client = LinkupClient()
-
 server = Server("mcp-search-linkup")
 logger = logging.getLogger("mcp-search-linkup")
 logger.setLevel(logging.INFO)
@@ -60,16 +58,21 @@ async def handle_list_tools() -> list[types.Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "query": {"type": "string"},
+                    "query": {
+                        "type": "string",
+                        "description": "The query to search the web with. This should be a question, no need to write in keywords."
+                    },
                     "depth": {
                         "type": "string",
                         "enum": ["standard", "deep"],
-                        "default": "standard"
+                        "default": "standard",
+                        "description": "The depth of the search. Standard is a basic search while deep takes more time to complete but can answer more complex questions."
                     },
                     "output_type": {
                         "type": "string",
                         "enum": ["searchResults", "sourcedAnswer", "structured"],
-                        "default": "sourcedAnswer"
+                        "default": "searchResults",
+                        "description": "The type of output to return"
                     }
                 },
                 "required": ["query"],
@@ -92,11 +95,12 @@ async def handle_call_tool(
 
     query = arguments.get("query")
     depth = arguments.get("depth", "standard")
-    output_type = arguments.get("output_type", "sourcedAnswer")
+    output_type = arguments.get("output_type", "searchResults")
 
     if not query:
         raise ValueError("Missing query")
 
+    client = LinkupClient()
     # Perform the search using LinkupClient
     search_response = client.search(
         query=query,

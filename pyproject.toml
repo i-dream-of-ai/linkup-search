@@ -1,0 +1,20 @@
+[project]
+name = "mcp-search-linkup"
+version = "0.1.0"
+description = "A MCP server to search web with Linkup"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+ "linkup-sdk>=0.1.8",
+ "mcp>=1.0.0",
+]
+[[project.authors]]
+name = "Guillaume Larcher"
+email = "glm.larcher@gmail.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+mcp-search-linkup = "mcp_search_linkup:main"

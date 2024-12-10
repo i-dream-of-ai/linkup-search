@@ -7,23 +7,20 @@ import mcp.server.stdio
 from pydantic import AnyUrl
 import logging
 
-import os
-# Initialize the LinkupClient
-
 server = Server("mcp-search-linkup")
 logger = logging.getLogger("mcp-search-linkup")
 logger.setLevel(logging.INFO)
+
 
 ## Logging
 @server.set_logging_level()
 async def set_logging_level(level: types.LoggingLevel) -> types.EmptyResult:
     logger.setLevel(level.upper())
     await server.request_context.session.send_log_message(
-        level="info",
-        data=f"Log level set to {level}",
-        logger="mcp-search-linkup"
+        level="info", data=f"Log level set to {level}", logger="mcp-search-linkup"
     )
     return types.EmptyResult()
+
 
 ## Resources
 @server.list_resources()
@@ -32,18 +29,10 @@ async def list_resources() -> list[types.Resource]:
         types.Resource(
             uri=AnyUrl("https://www.thebridgechronicle.com/media"),
             name="The Bridge Chronicle",
-            mimeType="text/html"
+            mimeType="text/html",
         )
     ]
 
-@server.read_resource()
-async def read_resource(uri: AnyUrl) -> str:
-    if str(uri) == "https://www.thebridgechronicle.com/media":
-        page = client.content(url="https://www.thebridgechronicle.com/news/capgemini-employees-walk-together-in-celebration-of-indias-independence")
-        return page.content
-
-
-    raise ValueError("Resource not found")
 
 ## Tools
 @server.list_tools()
@@ -60,25 +49,14 @@ async def handle_list_tools() -> list[types.Tool]:
                 "properties": {
                     "query": {
                         "type": "string",
-                        "description": "The query to search the web with. This should be a question, no need to write in keywords."
+                        "description": "The query to search the web with. This should be a question, no need to write in keywords.",
                     },
-                    "depth": {
-                        "type": "string",
-                        "enum": ["standard", "deep"],
-                        "default": "standard",
-                        "description": "The depth of the search. Standard is a basic search while deep takes more time to complete but can answer more complex questions."
-                    },
-                    "output_type": {
-                        "type": "string",
-                        "enum": ["searchResults", "sourcedAnswer", "structured"],
-                        "default": "searchResults",
-                        "description": "The type of output to return"
-                    }
                 },
                 "required": ["query"],
             },
         )
     ]
+
 
 @server.call_tool()
 async def handle_call_tool(
@@ -94,8 +72,6 @@ async def handle_call_tool(
         raise ValueError("Missing arguments")
 
     query = arguments.get("query")
-    depth = arguments.get("depth", "standard")
-    output_type = arguments.get("output_type", "searchResults")
 
     if not query:
         raise ValueError("Missing query")
@@ -104,8 +80,8 @@ async def handle_call_tool(
     # Perform the search using LinkupClient
     search_response = client.search(
         query=query,
-        depth=depth,
-        output_type=output_type,
+        depth="standard",
+        output_type="searchResults",
     )
 
     return [
@@ -114,6 +90,7 @@ async def handle_call_tool(
             text=str(search_response),
         )
     ]
+
 
 async def main():
     # Run the server using stdin/stdout streams
@@ -130,6 +107,7 @@ async def main():
                 ),
             ),
         )
+
 
 if __name__ == "__main__":
     asyncio.run(main())

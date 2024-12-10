@@ -22,18 +22,6 @@ async def set_logging_level(level: types.LoggingLevel) -> types.EmptyResult:
     return types.EmptyResult()
 
 
-## Resources
-@server.list_resources()
-async def list_resources() -> list[types.Resource]:
-    return [
-        types.Resource(
-            uri=AnyUrl("https://www.thebridgechronicle.com/media"),
-            name="The Bridge Chronicle",
-            mimeType="text/html",
-        )
-    ]
-
-
 ## Tools
 @server.list_tools()
 async def handle_list_tools() -> list[types.Tool]:

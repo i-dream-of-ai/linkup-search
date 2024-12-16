@@ -17,12 +17,11 @@ Claude without Linkup stops at April 2024. With Linkup, Claude accesses current 
 
 Ask Claude anything like:
 ```
-"When does sonic 3 movie come out?" 
 "Why did McLaren win F1 championship 2024?" 
-"iphone 16 pro max release date price"
-"What's the latest breakthrough in cancer research?" 
+"What's the latest breakthrough in cancer research?"
+"Can you summarize for me the latest news about the war in Ukraine ?"
+"Please help me to find latest data about Global GDP growth rate"
 ```
-
 ## 💎 Premium Features
 
 Linkup gives Claude access to:
@@ -30,19 +29,27 @@ Linkup gives Claude access to:
 - 🔥 Real-time news and updates
 
 ## 💬 From Our Users
-
-> "Can't wait to use it every day !!"
-> - François @ Amazon
-
-> "Whoa! 🤯 this is huge."
-> - Fred @ Spotify
-
+```
+My use of Claude was limited by its cutoff date and lack of up-to-date information. This problem is now solved, and I can use Claude for end-to-end tasks
+- François, data engineer in a tech company
+```
+```
+"The work the team has been doing with the MCP is absolutely mind-blowing. Making it accessible to non-developers makes it even more powerful"
+- Fred, PM in a tech company
+```
+```
+"With this installer, I was able to catch the importance of both Linkup product and the Claude's MCP"
+- Elisa, VC
+```
 
 ## 🤝 Community & Support
 
-Connect with us:
-- 💬 Discord: [Join our community](https://discord.com/invite/9q9mCYJa86)
-- 🐦 Twitter: [@Linkup_platform](https://x.com/Linkup_platform)
+[Discord](https://discord.com/invite/9q9mCYJa86)
+
+[X](https://x.com/Linkup_platform)
+
+[Linkedin](https://www.linkedin.com/company/linkup-platform/)
+
 
 ## 📄 License
 

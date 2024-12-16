@@ -1,111 +1,56 @@
-# mcp-search-linkup MCP server
+# 🌟 Linkup for Claude: Internet Access for Your AI Assistant
 
-A MCP server to search web with Linkup
+Give Claude access to real-time knowledge and premium content. Transform Claude's responses with current events, and trusted, premium sources through Linkup's powerful search capability.
 
-## Components
+## ⚡️ Get Started in 60 Seconds
 
-### Resources
+1. [Download Linkup for Claude](https://linkup.so/linkup-for-claude)
+2. Sign in to Claude Desktop
+3. Open Linkup & connect your account
+4. Click "*Allow for This Chat*" when prompted
 
-The server implements a simple note storage system with:
-- Custom note:// URI scheme for accessing individual notes
-- Each note resource has a name, description and text/plain mimetype
+Done! Claude is now supercharged with internet access. 🎉
 
-### Prompts
+## 🎭 Experience the Difference
 
-The server provides a single prompt:
-- summarize-notes: Creates summaries of all stored notes
-  - Optional "style" argument to control detail level (brief/detailed)
-  - Generates prompt combining all current notes with style preference
+Claude without Linkup stops at April 2024. With Linkup, Claude accesses current events, premium content, and trusted sources to provide up-to-date, accurate information in every conversation.
 
-### Tools
-
-The server implements one tool:
-- add-note: Adds a new note to the server
-  - Takes "name" and "content" as required string arguments
-  - Updates server state and notifies clients of resource changes
-
-## Configuration
-
-[TODO: Add configuration details specific to your implementation]
-
-## Quickstart
-
-### Install
-
-#### Claude Desktop
-
-On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
-On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
-
-<details>
-  <summary>Development/Unpublished Servers Configuration</summary>
-  ```
-  "mcpServers": {
-    "mcp-search-linkup": {
-      "command": "uv",
-      "args": [
-        "--directory",
-        "/Users/thot/Desktop/linkup/mcp-search-linkup",
-        "run",
-        "mcp-search-linkup"
-      ]
-    }
-  }
-  ```
-</details>
-
-<details>
-  <summary>Published Servers Configuration</summary>
-  ```
-  "mcpServers": {
-    "mcp-search-linkup": {
-      "command": "uvx",
-      "args": [
-        "mcp-search-linkup"
-      ]
-    }
-  }
-  ```
-</details>
-
-## Development
-
-### Building and Publishing
-
-To prepare the package for distribution:
-
-1. Sync dependencies and update lockfile:
-```bash
-uv sync
+Ask Claude anything like:
+```
+"When does sonic 3 movie come out?" 
+"Why did McLaren win F1 championship 2024?" 
+"iphone 16 pro max release date price"
+"What's the latest breakthrough in cancer research?" 
 ```
 
-2. Build package distributions:
-```bash
-uv build
-```
+## 💎 Premium Features
 
-This will create source and wheel distributions in the `dist/` directory.
+Linkup gives Claude access to:
+- 📰 Premium content
+- 🔥 Real-time news and updates
 
-3. Publish to PyPI:
-```bash
-uv publish
-```
+## 💬 From Our Users
 
-Note: You'll need to set PyPI credentials via environment variables or command flags:
-- Token: `--token` or `UV_PUBLISH_TOKEN`
-- Or username/password: `--username`/`UV_PUBLISH_USERNAME` and `--password`/`UV_PUBLISH_PASSWORD`
+> "Can't wait to use it every day !!"
+> - François @ Amazon
 
-### Debugging
-
-Since MCP servers run over stdio, debugging can be challenging. For the best debugging
-experience, we strongly recommend using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector).
+> "Whoa! 🤯 this is huge."
+> - Fred @ Spotify
 
 
-You can launch the MCP Inspector via [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) with this command:
+## 🤝 Community & Support
 
-```bash
-npx @modelcontextprotocol/inspector uv --directory /Users/thot/Desktop/linkup/mcp-search-linkup run mcp-search-linkup
-```
+Connect with us:
+- 💬 Discord: [Join our community](https://discord.com/invite/9q9mCYJa86)
+- 🐦 Twitter: [@Linkup_platform](https://x.com/Linkup_platform)
 
+## 📄 License
 
-Upon launching, the Inspector will display a URL that you can access in your browser to begin debugging.
+MIT License - Innovate freely! 🚀
+
+---
+
+<p align="center">
+<strong>✨ Upgrade Claude. Get Linkup. ✨</strong><br>
+<a href="https://linkup.so/linkup-for-claude">Download</a> • <a href="https://docs.linkup.so/">Docs</a>
+</p>

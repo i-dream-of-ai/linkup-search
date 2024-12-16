@@ -30,7 +30,7 @@ Linkup gives Claude access to:
 
 ## 💬 From Our Users
 ```
-My use of Claude was limited by its cutoff date and lack of up-to-date information. This problem is now solved, and I can use Claude for end-to-end tasks
+"My use of Claude was limited by its cutoff date and lack of up-to-date information. This problem is now solved, and I can use Claude for end-to-end tasks"
 - François, data engineer in a tech company
 ```
 ```

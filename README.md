@@ -1,6 +1,6 @@
 # 🌟 Linkup for Claude: Internet Access for Your AI Assistant
 
-Give Claude access to real-time knowledge and premium content. Transform Claude's responses with current events, and trusted, premium sources through Linkup's powerful search capability.
+Give Claude access to real-time knowledge and premium content. Get rid of Claude's cutoff data and transform Claude's responses with current events, and trusted, premium sources through Linkup's powerful search capability.
 
 ## ⚡️ Get Started in 60 Seconds
 

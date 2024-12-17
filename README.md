@@ -2,6 +2,8 @@
 
 Give Claude access to real-time knowledge and premium content. Get rid of Claude's cutoff data and transform Claude's responses with current events, and trusted, premium sources through Linkup's powerful search capability.
 
+<a href="https://glama.ai/mcp/servers/69qbbv8hl9"><img width="380" height="200" src="https://glama.ai/mcp/servers/69qbbv8hl9/badge" alt="mcp-search-linkup MCP server" /></a>
+
 ## ⚡️ Get Started in 60 Seconds
 
 1. [Download Linkup for Claude](https://linkup.so/linkup-for-claude)

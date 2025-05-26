@@ -1,73 +1,55 @@
-# 🌟 Linkup for Claude: Internet Access for Your AI Assistant
+# 🌟 Linkup Python MCP Server
 
-Give Claude access to real-time knowledge and premium content. Get rid of Claude's cutoff data and
-transform Claude's responses with current events, and trusted, premium sources through Linkup's
-powerful search capability.
+A Model Context Protocol (MCP) server that provides web search capabilities through Linkup's advanced search API. This server enables AI assistants and development tools to perform intelligent web searches with natural language queries.
 
 <a href="https://glama.ai/mcp/servers/69qbbv8hl9"><img width="380" height="200" src="https://glama.ai/mcp/servers/69qbbv8hl9/badge" alt="mcp-search-linkup MCP server" /></a>
 
-## ⚡️ Get Started in 60 Seconds
+## ✨ Why Linkup?
 
-1. [Download Linkup for Claude](https://linkup.so/linkup-for-claude)
-2. Sign in to Claude Desktop
-3. Open Linkup & connect your account
-4. Click "_Allow for This Chat_" when prompted
+- 🔍 **Advanced Web Search**: Leverage Linkup's AI-powered search engine for high-quality, relevant results
+- 💬 **Natural Language Queries**: Ask questions in plain English or your preferred language - no need for keyword optimization
+- 🚀 **Real-time Information**: Access up-to-date web content and current information
+- 📚 **Comprehensive Results**: Get detailed search results with source citations
+- 🔧 **Easy Integration**: Works with any MCP-compatible client
 
-Done! Claude is now supercharged with internet access. 🎉
+## 🚀 Installation
 
-## 🎭 Experience the Difference
+The Linkup MCP server can be used with any MCP-compatible client. 
 
-Claude without Linkup stops at April 2024. With Linkup, Claude accesses current events, premium
-content, and trusted sources to provide up-to-date, accurate information in every conversation.
+For an integration with Claude Desktop or with Cursor, please follow instruction [here](https://docs.linkup.so/pages/integrations/mcp/mcp).
 
-Ask Claude anything like:
+For other MCP-compatible clients, use these connection details:
 
-```
-"Why did McLaren win F1 championship 2024?"
-"What's the latest breakthrough in cancer research?"
-"Can you summarize for me the latest news about the war in Ukraine ?"
-"Please help me to find latest data about Global GDP growth rate"
-```
+- **Command**: `python -m linkup_mcp_server`
+- **Required Environment Variables**: `LINKUP_API_KEY`
 
-## 💎 Premium Features
+Consult your MCP client's documentation for specific configuration instructions.
 
-Linkup gives Claude access to:
+## 💬 Example Queries
 
-- 📰 Premium content
-- 🔥 Real-time news and updates
+The Linkup MCP server excels at answering complex questions and finding specific information:
 
-## 💬 From Our Users
+- "What are the latest developments in quantum computing?"
+- "How does the EU AI Act affect startups?"
+- "Find recent research on sustainable aviation fuel"
+- "What are the current best practices for MCP server development?"
 
-```
-"My use of Claude was limited by its cutoff date and lack of up-to-date information. This problem is now solved, and I can use Claude for end-to-end tasks"
-- François, data engineer in a tech company
-```
+## 🤝 Contributing
 
-```
-"The work the team has been doing with the MCP is absolutely mind-blowing. Making it accessible to non-developers makes it even more powerful"
-- Fred, PM in a tech company
-```
+Pull requests are welcome! Feel free to open an issue first to discuss what you’d like to see improved.
 
-```
-"With this installer, I was able to catch the importance of both Linkup product and the Claude's MCP"
-- Elisa, VC
-```
+## 📚 Resources
 
-## 🤝 Community & Support
+- [Linkup Documentation](https://docs.linkup.so)
+- [MCP Protocol Specification](https://modelcontextprotocol.io)
+- [Linkup API Reference](https://docs.linkup.so/api-reference)
 
-[Discord](https://discord.com/invite/9q9mCYJa86)
+## 📣 Community & Support
 
-[X](https://x.com/Linkup_platform)
-
-[Linkedin](https://www.linkedin.com/company/linkup-platform/)
+* Email: [support@linkup.so](mailto:support@linkup.so)
+* Discord: [Join our community](https://discord.com/invite/9q9mCYJa86)
+* X / Twitter: [@Linkup_platform](https://x.com/Linkup_platform)
 
 ## 📄 License
 
-MIT License - Innovate freely! 🚀
-
----
-
-<p align="center">
-<strong>✨ Upgrade Claude. Get Linkup. ✨</strong><br>
-<a href="https://linkup.so/linkup-for-claude">Download</a> • <a href="https://docs.linkup.so/">Docs</a>
-</p>
+This project is licensed under the MIT License - Innovate freely! 🚀
